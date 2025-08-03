@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.platypushasnohat.wacky_world.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "wacky_world.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

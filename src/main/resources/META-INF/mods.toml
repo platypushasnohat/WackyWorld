@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[32,)"
+license = "MIT"
+
+[[mods]]
+    modId = "wacky_world"
+    version = "${file.jarVersion}"
+    logoFile = "wacky_world.png"
+    authors = "IcyDwarf, platypushasnohat"
+    displayName = "Wacky World"
+    description = '''
+    New biomes and more!
+    '''
+
+[[dependencies.wacky_world]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.20.1,1.20.2)"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[dependencies.wacky_world]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[47.1.3,)"
+    ordering = "AFTER"
+    side = "BOTH"
