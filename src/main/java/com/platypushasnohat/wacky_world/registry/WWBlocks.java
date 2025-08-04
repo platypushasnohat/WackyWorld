@@ -20,7 +20,10 @@ public class WWBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, WackyWorld.MOD_ID);
     public static List<RegistryObject<? extends Block>> AUTO_TRANSLATE = new ArrayList<>();
 
-    public static final RegistryObject<Block> MYOCINAL_STONE = registerBlock("myocinal_stone", () -> new Block(WWBlockProperties.MYOCINAL_STONE));
+    public static final RegistryObject<Block> MYORITE = registerBlock("myorite", () -> new Block(WWBlockProperties.MYORITE));
+    public static final RegistryObject<Block> POLISHED_MYORITE = registerBlock("polished_myorite", () -> new Block(WWBlockProperties.MYORITE));
+    public static final RegistryObject<Block> MYORITE_BRICKS = registerBlock("myorite_bricks", () -> new Block(WWBlockProperties.MYORITE));
+    public static final RegistryObject<Block> CHISELED_MYORITE_BRICKS = registerBlock("chiseled_myorite_bricks", () -> new Block(WWBlockProperties.MYORITE));
 
     private static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier) {
         RegistryObject<B> block = BLOCKS.register(name, supplier);

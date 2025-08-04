@@ -13,11 +13,14 @@ public class WackyWorldTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WackyWorld.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> WACKY_WORLD_TAB = CREATIVE_TABS.register("wacky_world",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(WWBlocks.MYOCINAL_STONE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(WWBlocks.MYORITE.get()))
                     .title(Component.translatable("itemGroup.wacky_world"))
                     .displayItems((pParameters, output) -> {
 
-                        output.accept(WWBlocks.MYOCINAL_STONE.get());
+                        output.accept(WWBlocks.MYORITE.get());
+                        output.accept(WWBlocks.POLISHED_MYORITE.get());
+                        output.accept(WWBlocks.MYORITE_BRICKS.get());
+                        output.accept(WWBlocks.CHISELED_MYORITE_BRICKS.get());
 
                     }).build());
 }

@@ -24,7 +24,10 @@ public class WWBlockstateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        this.cubeAllBlock(MYOCINAL_STONE);
+        this.cubeAllBlock(MYORITE);
+        this.cubeAllBlock(POLISHED_MYORITE);
+        this.cubeAllBlock(MYORITE_BRICKS);
+        this.cubeAllBlock(CHISELED_MYORITE_BRICKS);
     }
 
     // item

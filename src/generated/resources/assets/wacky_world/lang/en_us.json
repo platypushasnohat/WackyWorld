@@ -1,4 +1,7 @@
 {
-  "block.wacky_world.myocinal_stone": "Myocinal Stone",
+  "block.wacky_world.chiseled_myorite_bricks": "Chiseled Myorite Bricks",
+  "block.wacky_world.myorite": "Myorite",
+  "block.wacky_world.myorite_bricks": "Myorite Bricks",
+  "block.wacky_world.polished_myorite": "Polished Myorite",
   "itemGroup.wacky_world": "Wacky World"
 }

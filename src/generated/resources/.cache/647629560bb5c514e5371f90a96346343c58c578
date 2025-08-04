@@ -1,4 +1,13 @@
-// 1.20.1	2025-08-03T16:30:28.9938256	Block States: wacky_world
-cc924542bc6316d3630e83602fa615e147a295df assets/wacky_world/blockstates/myocinal_stone.json
-fca347c01cecd351ace7130dbb301b9ce2bc752e assets/wacky_world/models/block/myocinal_stone.json
-0dd098c0ecd57e05e9c1f9745c21752cf1087d0f assets/wacky_world/models/item/myocinal_stone.json
+// 1.20.1	2025-08-03T18:30:45.5399889	Block States: wacky_world
+1b411c26ed55dc9ba3da598a2d99ba575c665a3b assets/wacky_world/blockstates/chiseled_myorite_bricks.json
+fcf2958b468f9da8b537abe83622ef2339e851c3 assets/wacky_world/blockstates/myorite.json
+5728461498dab09db28aeed65f3783d0df5bbcfb assets/wacky_world/blockstates/myorite_bricks.json
+d6ee2db45f67e6fe972bd3233132e462a553c16e assets/wacky_world/blockstates/polished_myorite.json
+51bf2f18ee647db3208cf1329fea57e3a3194974 assets/wacky_world/models/block/chiseled_myorite_bricks.json
+cb73ab268c6bfa517b53c373272c8e8ade68908e assets/wacky_world/models/block/myorite.json
+0490f3b8cef42cfbce2e5bc7a5f290b19e5e6c7a assets/wacky_world/models/block/myorite_bricks.json
+164cb5b35e486e379420376bfc48896576d22583 assets/wacky_world/models/block/polished_myorite.json
+0cf04b77539804ee855fb3e8096b34b33fb86d32 assets/wacky_world/models/item/chiseled_myorite_bricks.json
+6c4325e23df58dfb8de5eaa880a2186265248e22 assets/wacky_world/models/item/myorite.json
+f8836b165c1da4026d98145764facbcc47be1399 assets/wacky_world/models/item/myorite_bricks.json
+5fc0a31e9ac1ed0db4d1fd76b30c1c7a404633e8 assets/wacky_world/models/item/polished_myorite.json

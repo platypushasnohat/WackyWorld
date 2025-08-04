@@ -12,7 +12,7 @@ import net.minecraft.world.level.material.PushReaction;
 
 public class WWBlockProperties {
 
-    public static final BlockBehaviour.Properties MYOCINAL_STONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).forceSolidOn().requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties MYORITE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).forceSolidOn().requiresCorrectToolForDrops();
 
     public static final BlockBehaviour.Properties PLANT = BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY);
     public static final BlockBehaviour.Properties TALL_PLANT = BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).noCollission().instabreak().ignitedByLava().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY);
