@@ -28,6 +28,9 @@ public class WWBlockstateProvider extends BlockStateProvider {
         this.cubeAllBlock(POLISHED_MYORITE);
         this.cubeAllBlock(MYORITE_BRICKS);
         this.cubeAllBlock(CHISELED_MYORITE_BRICKS);
+        this.tintedPottedPlant(SHRUB, POTTED_SHRUB);
+        this.tintedPottedPlant(TWIRLY_GRASS, POTTED_TWIRLY_GRASS);
+        this.tintedPottedPlant(SHORT_GRASS, POTTED_SHORT_GRASS);
     }
 
     // item
@@ -127,6 +130,11 @@ public class WWBlockstateProvider extends BlockStateProvider {
         this.simpleBlock(block.get(), this.models().cross(getItemName(block.get()), this.blockTexture(block.get())).renderType("cutout"));
     }
 
+    private void simpleTintedCross(RegistryObject<Block> block) {
+        this.simpleBlock(block.get(), this.models().withExistingParent(getItemName(block.get()), "block/tinted_cross").texture("cross", this.blockTexture(block.get())).renderType("cutout"));
+        this.itemModel(block);
+    }
+
     private void tallPlant(RegistryObject<Block> flower) {
         String name = getItemName(flower.get());
         Function<String, ModelFile> model = s -> this.models().cross(name + "_" + s, this.modLoc("block/" + name + "_" + s)).renderType("cutout");
@@ -140,9 +148,20 @@ public class WWBlockstateProvider extends BlockStateProvider {
         this.simpleBlock(pot.get(), model);
     }
 
+    private void tintedPot(RegistryObject<Block> pot, ResourceLocation texture) {
+        ModelFile model = this.models().withExistingParent(getBlockName(pot.get()), "block/tinted_flower_pot_cross").texture("plant", texture).renderType("cutout");
+        this.simpleBlock(pot.get(), model);
+    }
+
     private void pottedPlant(RegistryObject<Block> plant, RegistryObject<Block> pot) {
         this.pot(pot, this.blockTexture(plant.get()));
         this.simpleCross(plant);
+        this.generatedItem(plant.get(), TextureFolder.BLOCK);
+    }
+
+    private void tintedPottedPlant(RegistryObject<Block> plant, RegistryObject<Block> pot) {
+        this.tintedPot(pot, this.blockTexture(plant.get()));
+        this.simpleTintedCross(plant);
         this.generatedItem(plant.get(), TextureFolder.BLOCK);
     }
 

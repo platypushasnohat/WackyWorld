@@ -5,6 +5,8 @@ import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BushBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,6 +26,15 @@ public class WWBlocks {
     public static final RegistryObject<Block> POLISHED_MYORITE = registerBlock("polished_myorite", () -> new Block(WWBlockProperties.MYORITE));
     public static final RegistryObject<Block> MYORITE_BRICKS = registerBlock("myorite_bricks", () -> new Block(WWBlockProperties.MYORITE));
     public static final RegistryObject<Block> CHISELED_MYORITE_BRICKS = registerBlock("chiseled_myorite_bricks", () -> new Block(WWBlockProperties.MYORITE));
+
+    public static final RegistryObject<Block> SHRUB = registerBlock("shrub", () -> new BushBlock(WWBlockProperties.PLANT));
+    public static final RegistryObject<Block> POTTED_SHRUB = registerBlockWithoutItem("potted_shrub", () -> new FlowerPotBlock(SHRUB.get(), registerFlowerPot()));
+
+    public static final RegistryObject<Block> TWIRLY_GRASS = registerBlock("twirly_grass", () -> new BushBlock(WWBlockProperties.PLANT));
+    public static final RegistryObject<Block> POTTED_TWIRLY_GRASS = registerBlockWithoutItem("potted_twirly_grass", () -> new FlowerPotBlock(TWIRLY_GRASS.get(), registerFlowerPot()));
+
+    public static final RegistryObject<Block> SHORT_GRASS = registerBlock("short_grass", () -> new BushBlock(WWBlockProperties.PLANT));
+    public static final RegistryObject<Block> POTTED_SHORT_GRASS = registerBlockWithoutItem("potted_short_grass", () -> new FlowerPotBlock(SHORT_GRASS.get(), registerFlowerPot()));
 
     private static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier) {
         RegistryObject<B> block = BLOCKS.register(name, supplier);

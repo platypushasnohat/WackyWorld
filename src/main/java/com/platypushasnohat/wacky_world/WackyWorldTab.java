@@ -21,6 +21,9 @@ public class WackyWorldTab {
                         output.accept(WWBlocks.POLISHED_MYORITE.get());
                         output.accept(WWBlocks.MYORITE_BRICKS.get());
                         output.accept(WWBlocks.CHISELED_MYORITE_BRICKS.get());
+                        output.accept(WWBlocks.SHORT_GRASS.get());
+                        output.accept(WWBlocks.TWIRLY_GRASS.get());
+                        output.accept(WWBlocks.SHRUB.get());
 
                     }).build());
 }
