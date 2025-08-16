@@ -18,9 +18,22 @@ public class WackyWorldTab {
                     .displayItems((pParameters, output) -> {
 
                         output.accept(WWBlocks.MYORITE.get());
+                        output.accept(WWBlocks.MYORITE_STAIRS.get());
+                        output.accept(WWBlocks.MYORITE_SLAB.get());
+                        output.accept(WWBlocks.MYORITE_WALL.get());
+
                         output.accept(WWBlocks.POLISHED_MYORITE.get());
+                        output.accept(WWBlocks.POLISHED_MYORITE_STAIRS.get());
+                        output.accept(WWBlocks.POLISHED_MYORITE_SLAB.get());
+                        output.accept(WWBlocks.POLISHED_MYORITE_WALL.get());
+
                         output.accept(WWBlocks.MYORITE_BRICKS.get());
+                        output.accept(WWBlocks.MYORITE_BRICK_STAIRS.get());
+                        output.accept(WWBlocks.MYORITE_BRICK_SLAB.get());
+                        output.accept(WWBlocks.MYORITE_BRICK_WALL.get());
+
                         output.accept(WWBlocks.CHISELED_MYORITE_BRICKS.get());
+
                         output.accept(WWBlocks.SHORT_GRASS.get());
                         output.accept(WWBlocks.TWIRLY_GRASS.get());
                         output.accept(WWBlocks.SHRUB.get());

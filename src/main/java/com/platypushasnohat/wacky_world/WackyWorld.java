@@ -1,8 +1,6 @@
 package com.platypushasnohat.wacky_world;
 
-import com.platypushasnohat.wacky_world.data.WWBlockstateProvider;
-import com.platypushasnohat.wacky_world.data.WWItemModelProvider;
-import com.platypushasnohat.wacky_world.data.WWLanguageProvider;
+import com.platypushasnohat.wacky_world.data.*;
 import com.platypushasnohat.wacky_world.registry.WWBlocks;
 import com.platypushasnohat.wacky_world.registry.WWItems;
 import net.minecraft.core.HolderLookup;
@@ -60,6 +58,9 @@ public class WackyWorld {
         generator.addProvider(client, new WWLanguageProvider(data));
 
         boolean server = data.includeServer();
+        WWBlockTagProvider blockTags = new WWBlockTagProvider(output, provider, helper);
+        generator.addProvider(server, blockTags);
+        generator.addProvider(server, new WWItemTagProvider(output, provider, blockTags.contentsGetter(), helper));
     }
 
     public static ResourceLocation modPrefix(String name) {

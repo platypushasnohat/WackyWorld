@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "wacky_world:block/myorite",
+    "side": "wacky_world:block/myorite",
+    "top": "wacky_world:block/myorite"
+  }
+}

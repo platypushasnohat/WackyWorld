@@ -25,8 +25,20 @@ public class WWBlockstateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         this.cubeAllBlock(MYORITE);
+        this.stairs(MYORITE_STAIRS, this.blockTexture(MYORITE.get()));
+        this.slab(MYORITE_SLAB, this.blockTexture(MYORITE.get()));
+        this.wall(MYORITE_WALL, this.blockTexture(MYORITE.get()));
+
         this.cubeAllBlock(POLISHED_MYORITE);
+        this.stairs(POLISHED_MYORITE_STAIRS, this.blockTexture(POLISHED_MYORITE.get()));
+        this.slab(POLISHED_MYORITE_SLAB, this.blockTexture(POLISHED_MYORITE.get()));
+        this.wall(POLISHED_MYORITE_WALL, this.blockTexture(POLISHED_MYORITE.get()));
+
         this.cubeAllBlock(MYORITE_BRICKS);
+        this.stairs(MYORITE_BRICK_STAIRS, this.blockTexture(MYORITE_BRICKS.get()));
+        this.slab(MYORITE_BRICK_SLAB, this.blockTexture(MYORITE_BRICKS.get()));
+        this.wall(MYORITE_BRICK_WALL, this.blockTexture(MYORITE_BRICKS.get()));
+
         this.cubeAllBlock(CHISELED_MYORITE_BRICKS);
         this.tintedPottedPlant(SHRUB, POTTED_SHRUB);
         this.tintedPottedPlant(TWIRLY_GRASS, POTTED_TWIRLY_GRASS);

@@ -1,0 +1,5 @@
+// 1.20.1	2025-08-15T22:22:43.0508463	Tags for minecraft:block mod id wacky_world
+0433572ac268d2bb7066e05e334c0a115150e1ff data/minecraft/tags/blocks/mineable/pickaxe.json
+82ed8875bd2568d2718762e7184c1244d72049bb data/minecraft/tags/blocks/slabs.json
+473ba2c600216d876fc73ce1d4e7b9248a6ff936 data/minecraft/tags/blocks/stairs.json
+923c30c8fc8fa3c39792f89cd74ee296f60b087a data/minecraft/tags/blocks/walls.json

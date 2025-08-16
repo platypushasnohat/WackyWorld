@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "wacky_world:block/polished_myorite",
+    "side": "wacky_world:block/polished_myorite",
+    "top": "wacky_world:block/polished_myorite"
+  }
+}

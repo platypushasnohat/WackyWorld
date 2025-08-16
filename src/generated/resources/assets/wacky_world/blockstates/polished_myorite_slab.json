@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wacky_world:block/polished_myorite_slab"
+    },
+    "type=double": {
+      "model": "wacky_world:block/polished_myorite"
+    },
+    "type=top": {
+      "model": "wacky_world:block/polished_myorite_slab_top"
+    }
+  }
+}
