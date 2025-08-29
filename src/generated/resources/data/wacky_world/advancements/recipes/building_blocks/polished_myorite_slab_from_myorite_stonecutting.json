@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_myorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "wacky_world:myorite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wacky_world:polished_myorite_slab_from_myorite_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_myorite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wacky_world:polished_myorite_slab_from_myorite_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

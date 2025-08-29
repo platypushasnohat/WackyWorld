@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "wacky_world:myorite_bricks"
+  },
+  "result": "wacky_world:chiseled_myorite_bricks"
+}

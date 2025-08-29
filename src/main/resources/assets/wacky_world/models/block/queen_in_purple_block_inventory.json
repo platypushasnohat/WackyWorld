@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "wacky_world:block/queen_in_purple_block"
+  }
+}

@@ -17,6 +17,14 @@ public class WWBlockProperties {
     public static final BlockBehaviour.Properties PLANT = BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY);
     public static final BlockBehaviour.Properties TALL_PLANT = BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).noCollission().instabreak().ignitedByLava().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY);
 
+    public static BlockBehaviour.Properties mushroom(MapColor color) {
+        return BlockBehaviour.Properties.of().mapColor(color).replaceable().noCollission().instabreak().randomTicks().sound(SoundType.GRASS).lightLevel((state) -> 1).hasPostProcess(WWBlockProperties::always).ignitedByLava().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY);
+    }
+
+    public static BlockBehaviour.Properties hugeMushroomBlock(MapColor color) {
+        return BlockBehaviour.Properties.of().mapColor(color).instrument(NoteBlockInstrument.BASS).strength(0.2F).sound(SoundType.WOOD).ignitedByLava();
+    }
+
     public static BlockBehaviour.Properties leaves(MapColor color, SoundType sound) {
         return BlockBehaviour.Properties.of().mapColor(color).strength(0.2F).randomTicks().sound(sound).noOcclusion().isValidSpawn(WWBlockProperties::ocelotOrParrot).isSuffocating(WWBlockProperties::never).isViewBlocking(WWBlockProperties::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(WWBlockProperties::never);
     }
@@ -67,5 +75,9 @@ public class WWBlockProperties {
 
     public static boolean neverEntity(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entity) {
         return false;
+    }
+
+    private static boolean always(BlockState state, BlockGetter blockGetter, BlockPos blockPos) {
+        return true;
     }
 }

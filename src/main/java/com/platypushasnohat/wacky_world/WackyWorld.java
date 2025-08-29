@@ -2,6 +2,7 @@ package com.platypushasnohat.wacky_world;
 
 import com.platypushasnohat.wacky_world.data.*;
 import com.platypushasnohat.wacky_world.registry.WWBlocks;
+import com.platypushasnohat.wacky_world.registry.WWCompat;
 import com.platypushasnohat.wacky_world.registry.WWItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -39,7 +40,7 @@ public class WackyWorld {
     }
 
     public void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(WWCompat::registerCompat);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
@@ -61,6 +62,8 @@ public class WackyWorld {
         WWBlockTagProvider blockTags = new WWBlockTagProvider(output, provider, helper);
         generator.addProvider(server, blockTags);
         generator.addProvider(server, new WWItemTagProvider(output, provider, blockTags.contentsGetter(), helper));
+        generator.addProvider(server, new WWRecipeProvider(output));
+        generator.addProvider(server, WWLootProvider.register(output));
     }
 
     public static ResourceLocation modPrefix(String name) {

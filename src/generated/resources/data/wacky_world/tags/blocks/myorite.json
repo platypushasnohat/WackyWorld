@@ -1,0 +1,17 @@
+{
+  "values": [
+    "wacky_world:myorite",
+    "wacky_world:polished_myorite",
+    "wacky_world:myorite_bricks",
+    "wacky_world:chiseled_myorite_bricks",
+    "wacky_world:myorite_stairs",
+    "wacky_world:polished_myorite_stairs",
+    "wacky_world:myorite_brick_stairs",
+    "wacky_world:myorite_slab",
+    "wacky_world:polished_myorite_slab",
+    "wacky_world:myorite_brick_slab",
+    "wacky_world:myorite_wall",
+    "wacky_world:polished_myorite_wall",
+    "wacky_world:myorite_brick_wall"
+  ]
+}

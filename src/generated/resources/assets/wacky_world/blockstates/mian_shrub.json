@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "wacky_world:block/mian_shrub_bottom"
+    },
+    "half=upper": {
+      "model": "wacky_world:block/mian_shrub_top"
+    }
+  }
+}

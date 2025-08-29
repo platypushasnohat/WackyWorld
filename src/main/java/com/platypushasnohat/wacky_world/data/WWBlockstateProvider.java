@@ -22,6 +22,10 @@ public class WWBlockstateProvider extends BlockStateProvider {
         super(event.getGenerator().getPackOutput(), WackyWorld.MOD_ID, event.getExistingFileHelper());
     }
 
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+
     @Override
     protected void registerStatesAndModels() {
         this.cubeAllBlock(MYORITE);
@@ -38,11 +42,42 @@ public class WWBlockstateProvider extends BlockStateProvider {
         this.stairs(MYORITE_BRICK_STAIRS, this.blockTexture(MYORITE_BRICKS.get()));
         this.slab(MYORITE_BRICK_SLAB, this.blockTexture(MYORITE_BRICKS.get()));
         this.wall(MYORITE_BRICK_WALL, this.blockTexture(MYORITE_BRICKS.get()));
-
         this.cubeAllBlock(CHISELED_MYORITE_BRICKS);
+
         this.tintedPottedPlant(SHRUB, POTTED_SHRUB);
         this.tintedPottedPlant(TWIRLY_GRASS, POTTED_TWIRLY_GRASS);
         this.tintedPottedPlant(SHORT_GRASS, POTTED_SHORT_GRASS);
+
+        this.pottedPlant(SHORT_MYCELIUM_GRASS, POTTED_SHORT_MYCELIUM_GRASS);
+        this.pottedPlant(MYCELIUM_GRASS, POTTED_MYCELIUM_GRASS);
+
+        this.tallPlant(MIAN_SHRUB);
+        this.cubeAllBlockWithRenderType(MIAN_BUSH, "cutout");
+
+        this.pottedPlant(CAVE_PATTY, POTTED_CAVE_PATTY);
+        this.pottedPlant(COPPER_ENOKI, POTTED_COPPER_ENOKI);
+        this.pottedPlant(RAINCAP, POTTED_RAINCAP);
+        this.pottedPlant(CREAM_CAP, POTTED_CREAM_CAP);
+        this.pottedPlant(CHICKEN_OF_THE_CAVES, POTTED_CHICKEN_OF_THE_CAVES);
+        this.pottedPlant(POWDER_GNOME, POTTED_POWDER_GNOME);
+
+        this.pottedPlant(CAP_OF_EYE, POTTED_CAP_OF_EYE);
+        this.pottedPlant(PURPLE_KNOB, POTTED_PURPLE_KNOB);
+        this.pottedPlant(SLIPPERY_TOP, POTTED_SLIPPERY_TOP);
+
+        this.pottedPlant(INK_CAP, POTTED_INK_CAP);
+        this.pottedPlant(PRINCESS_JELLY, POTTED_PRINCESS_JELLY);
+        this.pottedPlant(POP_CAP, POTTED_POP_CAP);
+        this.pottedPlant(LIME_NUB, POTTED_LIME_NUB);
+        this.pottedPlant(GREEN_FUNK, POTTED_GREEN_FUNK);
+        this.pottedPlant(BLUE_TRUMPET, POTTED_BLUE_TRUMPET);
+        this.pottedPlant(DEATH_CAP, POTTED_DEATH_CAP);
+        this.pottedPlant(QUEEN_IN_PURPLE, POTTED_QUEEN_IN_PURPLE);
+        this.pottedPlant(ORBSHROOM, POTTED_ORBSHROOM);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
     }
 
     // item
@@ -136,6 +171,11 @@ public class WWBlockstateProvider extends BlockStateProvider {
     private void leaves(RegistryObject<Block> leaves) {
         this.simpleBlock(leaves.get(), this.models().withExistingParent(getItemName(leaves.get()), "block/leaves").texture("all", this.blockTexture(leaves.get())));
         this.itemModel(leaves);
+    }
+
+    private void cubeAllBlockWithRenderType(RegistryObject<Block> block, String renderType) {
+        this.simpleBlock(block.get(), models().getBuilder(name(block.get())).parent(new ModelFile.UncheckedModelFile(new ResourceLocation("block/cube_all"))).renderType(renderType).texture("all", blockTexture(block.get())));
+        this.itemModel(block);
     }
 
     private void simpleCross(RegistryObject<Block> block) {

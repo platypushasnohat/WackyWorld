@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:diorite"
+    },
+    "X": {
+      "tag": "forge:mushrooms"
+    }
+  },
+  "pattern": [
+    "X#",
+    "#X"
+  ],
+  "result": {
+    "count": 2,
+    "item": "wacky_world:myorite"
+  },
+  "show_notification": true
+}

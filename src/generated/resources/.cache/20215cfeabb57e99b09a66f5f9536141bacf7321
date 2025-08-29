@@ -1,4 +1,6 @@
-// 1.20.1	2025-08-15T22:22:43.0498505	Tags for minecraft:item mod id wacky_world
+// 1.20.1	2025-08-28T21:04:10.2282499	Tags for minecraft:item mod id wacky_world
+dfb4ce76d042b7c500b81f9e5f6e179ec067f019 data/forge/tags/items/mushrooms.json
 82ed8875bd2568d2718762e7184c1244d72049bb data/minecraft/tags/items/slabs.json
 473ba2c600216d876fc73ce1d4e7b9248a6ff936 data/minecraft/tags/items/stairs.json
 923c30c8fc8fa3c39792f89cd74ee296f60b087a data/minecraft/tags/items/walls.json
+0433572ac268d2bb7066e05e334c0a115150e1ff data/wacky_world/tags/items/myorite.json
